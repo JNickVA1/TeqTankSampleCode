@@ -1,0 +1,12 @@
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\MakoRunnerDataAccess\bin\Debug\TeqTank.Services.MakoRunnerDataAccess.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\MakoRunnerDataAccess\bin\Debug\TeqTank.Services.MakoRunnerDataAccess.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.csprojResolveAssemblyReference.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerDataAccess\bin\Debug\TeqTank.Services.MakoRunnerDataAccess.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerDataAccess\bin\Debug\TeqTank.Services.MakoRunnerDataAccess.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.csprojResolveAssemblyReference.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerDataAccess\obj\Debug\TeqTank.Services.MakoRunnerDataAccess.pdb

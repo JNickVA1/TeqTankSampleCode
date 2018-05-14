@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeqTank.Services.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:TeqTank.Services.Logging.FileLogger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Logging.FileLogger.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="companyKey"></param>
+            <param name="queueId"></param>
+            <param name="runTy"></param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.FileLogger.GenerateLog(System.Collections.Generic.List{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.FileLogger.GetFilePath">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Logging.FileLogger.PathVerification(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.FileLogger.WaitSharingVio(System.Action,System.Nullable{System.TimeSpan},System.Action)">
+            <summary>
+            Executes the specified action. If the action results in a file sharing violation exception, the action will be
+            repeatedly retried after a short delay (which increases after every failed attempt).
+            </summary>
+            <param name="action">The action to be attempted and possibly retried.</param>
+            <param name="maximum">Maximum amount of time to keep retrying for. When expired, any sharing violation
+            exception will propagate to the caller of this method. Use null to retry indefinitely.</param>
+            <param name="onSharingVio">Action to execute when a sharing violation does occur (is called before the waiting).</param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.FileLogger.WaitSharingVio``1(System.Func{``0},System.Nullable{System.TimeSpan},System.Action)">
+            <summary>
+            Executes the specified function. If the function results in a file sharing violation exception, the function will be
+            repeatedly retried after a short delay (which increases after every failed attempt).
+            </summary>
+            <param name="func">The function to be attempted and possibly retried.</param>
+            <param name="maximum">Maximum amount of time to keep retrying for. When expired, any sharing violation
+            exception will propagate to the caller of this method. Use null to retry indefinitely.</param>
+            <param name="onSharingVio">Action to execute when a sharing violation does occur (is called before the waiting).</param>
+        </member>
+        <member name="T:TeqTank.Services.Logging.LoggingHelpers.LoggingHelpers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Logging.LoggingHelpers.LoggingHelpers.InsertIntoLog(System.Int32,TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanySettings,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="logRunType"></param>
+            <param name="companySettingsForId"></param>
+            <param name="connStr"></param>
+            <param name="companyId"></param>
+            <param name="queueId"></param>
+            <param name="detail"></param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.LoggingHelpers.LoggingHelpers.UpdateRunLog(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="connStr"></param>
+            <param name="companyId"></param>
+            <param name="queueId"></param>
+            <param name="runId"></param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.LoggingHelpers.LoggingHelpers.InsertIntoLog(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="connectionString"></param>
+            <param name="companyId"></param>
+            <param name="itemQueueId"></param>
+            <param name="logDetail"></param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.LoggingHelpers.LoggingHelpers.LogQueueError(System.String,System.Int32,System.Int32,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="connStr"></param>
+            <param name="companyId"></param>
+            <param name="queueId"></param>
+            <param name="exc"></param>
+        </member>
+        <member name="M:TeqTank.Services.Logging.LoggingHelpers.LoggingHelpers.LogQueueError(System.String,System.Int32,TeqTank.Services.DataAccess.DataQueue.RunQueueItem,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="connStr"></param>
+            <param name="companyId"></param>
+            <param name="queueItem"></param>
+            <param name="exc"></param>
+        </member>
+    </members>
+</doc>

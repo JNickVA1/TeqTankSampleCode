@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeqTank.Services.MakoRunnerConsolidated</name>
+    </assembly>
+    <members>
+        <member name="T:TeqTank.Services.MakoRunnerConsolidated.Program">
+            <summary>
+            The class containing the console application entry point.
+            </summary>
+            <remarks>
+            The MakoRunnerConsolidated console application can be used for either a server execution 
+            or a cloud execution depending on command line parameters used for starting the application.
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.Main(System.String[])">
+            <summary>
+            The console application entry point.
+            </summary>
+            <param name="args">The command line arguments.</param>
+            <remarks>
+            We will enforce the use of specific command arguments, 
+            restricting the execution to specific circumstances.
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.GetRuntimeArguments">
+            <summary>
+            The method will attempt to open and read a text file containing runtime arguments.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.ParseCommandLine(System.Collections.Generic.IReadOnlyList{System.String})">
+            <summary>
+            Simply create a new ConsoleCommand object using the single argument string.
+            </summary>
+            <param name="argList">The list of command line arguments.</param>
+            <returns>A new List of ConsoleCommand objects.</returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.Run(System.Collections.Generic.IReadOnlyCollection{TeqTank.Services.Common.Commands.ConsoleCommand})">
+            <summary>
+            The Run method will start a thread using an object appropriate to the command line argument. 
+            The console application will continue to run until the user cancels execution, at which time
+            the thread will be canceled, the logger stopped, and the user informed of the application's status.
+            </summary>
+            <param name="commandList"></param>
+            <remarks>
+            Although it is not needed at this time, I have allowed for multiple console commands to be 
+            executed somewhat simultaneously. Because I am using threads to run the tasks, multiple 
+            threads can be started by using multiple command line arguments.
+            For example, we could start 2 or more Azure WebJobs or Windows services, each on its own thread, by running the console
+            application as: 
+            	MakoRunnerConsolidated -server:11 -server:17 -azure:21
+            The example above would result in 3 threads being started, 2 Windows services and 1 Azure WebJob.
+            
+            IMPORTANT--> You no longer can use the command line arguments. Instead, put the arguments in the RuntimeArguments.txt file.
+            
+            NOTE: If the application is run with multiple arguments, ALL threads will be stopped 
+            	  if the user cancels from the console window. I have not allowed for stopping 
+            	  the threads individually as of yet.
+            TODO: Add a robust command syntax that will allow the user to control many aspects of application.
+            
+            NOTE: I will be adding the capability to specify a specific Windows Service machine
+            	  and.or a specific Azure environment in which to run a service. I have in mind
+            	  to use either a named instance, like serverA or azureD, OR add an identifier
+            	  to the list of values after the ':' and preceding the company ID(s) associated 
+            	  with a service command, as in server:A,1,2,3, OR insert a colon after the list 
+            	  of company ID(s) and then specify the machine identifier, as in server:1:A.
+            	  All of this is to be determined later and NONE of this will be implemented in
+            	  the initial code-base.
+            TODO: Add the  capability to chain company IDs to run sequentially on a specific service by supplying a comma-separated list of company IDs.
+            
+            NOTE: For changes in the syntax of a console command, and to handle such changes, 
+            	  the ConsoleCommand class should be modified. In addition, anywhere that a 
+            	  ConsoleCommand object is used, such as in the ServiceController class, should
+            	  be modified to take advantage of changed command syntax.
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.GetCommandsFromSettings(System.Collections.Generic.IEnumerable{System.Configuration.SettingsProperty}@)">
+            <summary>
+            
+            </summary>
+            <param name="query"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.DisplayCommandLineInstructions">
+            <summary>
+            Displays the basic instructions for running the application from the command line.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.DisplayOperatingInstructions">
+            <summary>
+            Displays the instructions for operating the application once it has started.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunnerConsolidated.Program.ReadFromConsole(System.String)">
+            <summary>
+            Simply reads input from the user and returns the string that was entered.
+            </summary>
+            <param name="promptMessage">An optional prompt message. Defaults to an empty string.</param>
+            <returns>The line of characters entered by the user.</returns>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.CommissionsThreadParameter">
+            <summary>
+            The object used as thread data. 
+            </summary>
+            <remarks>
+            Contains properties that can be used for bother server and Azure web static methods.
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.IServiceProgressInfo">
+            <summary>
+            The interface that defines general properties and methods to be used in Progress Info classes.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.IServiceProgressInfo.ServiceName">
+            <summary>
+            The name of the service.
+            </summary>
+            <remarks>
+            This is a specific, unique, name, such as WindowsService27, NOT a generic name, such as "Windows" or "Azure".
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.IServiceTaskResult">
+            <summary>
+            The interface that defines general properties and methods to be used in Task TResult classes.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.RunCommissionServiceProgressInfo">
+            <inheritdoc />
+            <summary>
+            The class used to report progress for a Task that is used to call the RunCommissions method.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.ServiceProgressInfo">
+            <inheritdoc />
+            <summary>
+            The ServiceProgressInfo class is used as the value sent on a progress
+            event by the Progress class which is invoked within the Task that runs
+            the service method.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.ServiceProgressInfo.ServiceName">
+            <inheritdoc />
+            <summary>
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunnerConsolidated.ThreadObjects.ServiceTaskResult">
+            <inheritdoc />
+            <summary>
+            The object used to return results from a service Task.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,10 @@
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\bin\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.exe.config
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\bin\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.exe
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\bin\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\obj\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.AdminMainForm.resources
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\obj\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.Properties.Resources.resources
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\obj\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.csproj.GenerateResource.Cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\obj\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\obj\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.exe
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\obj\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunnerConsolidated.Admin\obj\DebugNewWithDocs\TeqTank.Services.MakoRunnerConsolidated.Admin.csprojResolveAssemblyReference.cache

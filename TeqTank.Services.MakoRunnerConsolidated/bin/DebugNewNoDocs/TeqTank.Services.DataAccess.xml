@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeqTank.Services.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:TeqTank.Services.DataAccess.DataModels.BooleanContract">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataModels.BooleanContract.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataModels.BooleanContract.DataHeader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataModels.BooleanContract.Success">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataModels.BooleanContract.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataModels.BooleanContract.ErrorCd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataModels.BooleanContract.Transaction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.DataAccess.DataModels.LinkModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.DataAccess.DataQueue.QueueManagement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.#ctor(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="companyId"></param>
+            <param name="connStr"></param>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.QueueManagement.CompanyId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.QueueManagement.ConnString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.QueueManagement.DelayTimeSpan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.FindNextQueueItem(TeqTank.Services.DataAccess.DataQueue.RunQueueItem@)">
+            <summary>
+            
+            </summary>
+            <param name="queueItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.InsertRealtimePush">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.ClearQueue">
+            <summary>
+            Delete all records for the Company ID used in the instance construction and on the local machine.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.CleanUpQueue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.DeleteQueueItem(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="queueId"></param>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.LogQueueError(System.String,System.Int32,System.Int32,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="connStr"></param>
+            <param name="companyId"></param>
+            <param name="queueId"></param>
+            <param name="exc"></param>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.QueueManagement.UpdateRunStartAndEndDate(System.String,System.Int32,System.Int32,System.DateTimeOffset,System.DateTimeOffset)">
+            <summary>
+            
+            </summary>
+            <param name="connStr"></param>
+            <param name="companyId"></param>
+            <param name="runId"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+        </member>
+        <member name="T:TeqTank.Services.DataAccess.DataQueue.RunQueueItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.Links">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.QueueId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.RunId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.PeriodTy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.PeriodId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.RunDescr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.Descr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.RunQueueStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.TreeSnapshotId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.VolumeSnapshotId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.StartDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.PlanId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.RevisionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.RunPriorityTy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.DataAccess.DataQueue.RunQueueItem.RunTy">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

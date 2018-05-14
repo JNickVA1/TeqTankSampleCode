@@ -1,0 +1,11 @@
+
+2/15/2018 8:30:10 PM ------------------------------------------
+2/15/2018 8:30:10 PM Now Processing Real Time -  QueueId 84656
+2/15/2018 8:30:10 PM RunTy(1), PlanId(60), RevisionId(12)
+2/15/2018 8:30:10 PM ------------------------------------------
+
+2/15/2018 8:30:10 PM [Error] Could not load file or assembly 'Insight.Database.Providers.Default, Version=5.2.8.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc' or one of its dependencies. The system cannot find the file specified.
+2/15/2018 8:30:10 PM [Error]    at TeqTank.Applications.Mako.PlanCommit..ctor(String connectionString, ILogProvider feedback, MakoPlan p)
+   at TeqTank.Applications.Mako.MakoAdmin.LoadXMLToDatabase(MakoConfig config)
+   at TeqTank.Applications.Mako.MakoAdmin.ProcessCommissions(MakoConfig config)
+   at TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.ProcessQueueItem(ApplicationContract appContract, DelegateLogProvider makoLogger, SqlCacheRepo makoCache, QueueManagement queueManager) in C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.MakoRunners\Runners\TopshelfWindowsService.cs:line 225

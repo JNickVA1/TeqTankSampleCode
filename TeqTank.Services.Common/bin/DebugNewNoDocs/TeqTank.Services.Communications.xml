@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeqTank.Services.Communications</name>
+    </assembly>
+    <members>
+        <member name="T:TeqTank.Services.Communications.BaseCommunications">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Communications.BaseCommunications.SendMessage(TeqTank.Services.Communications.IMessage)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:TeqTank.Services.Communications.ICommunications">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Communications.ICommunications.SendMessage(TeqTank.Services.Communications.IMessage)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:TeqTank.Services.Communications.IMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Communications.SocketCommunication.ISocket">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.ISocket.Url">
+            <summary>
+            The URL 
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.ISocket.SubProtocols">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Communications.SocketCommunication.SocketMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.CompanyId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.Percentage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.QueueId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.PeriodType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.PeriodId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.Processtime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.Information">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.SocketMessage.IsRun">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Communications.SocketCommunication.ServicesWebSocket">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Communications.SocketCommunication.ServicesWebSocket.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.ServicesWebSocket.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.ServicesWebSocket.SubProtocols">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Communications.SocketCommunication.ServicesWebSocket.ServicesSocket">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Communications.SocketCommunication.ServicesWebSocket.SendMessage(TeqTank.Services.Communications.IMessage)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:TeqTank.Services.Communications.WebCommunication.HttpHelpers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Communications.WebCommunication.HttpHelpers.HttpGetResponse(System.String,System.String,System.String)">
+            <summary>
+            Makes a GET call to the server at the URL provided.
+            </summary>
+            <param name="url"></param>
+            <param name="payload"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Communications.WebCommunication.HttpHelpers.HttpPostResponse(System.String,System.String,System.String)">
+            <summary>
+            Makes a POST call to the server at the URL provided.
+            </summary>
+            <param name="url"></param>
+            <param name="payload"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Communications.WebCommunication.HttpHelpers.HttpResponse(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="method"></param>
+            <param name="payload"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TeqTank.Services.MakoRunners.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CompanyId11" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ew0KICAiQ29tcGFueUlkIjogMTEsDQogICJDb21wYW55TmFtZSI6ICJSU29sdXRpb24iLA0KICAiQ29tcGFueUtleSI6ICJSU29sIiwNCiAgIlVzZXJuYW1lIjogIlJTb2x1dGlvbl9NYWtvUnVubmVyX0E0ODQyODc0LUI1RUQtNEFFNS1BN0M0LTBFNDgiLA0KICAiUHdkIjogImJ6cGJlM2xCSnpYR2IrOVQyZTlkc2UzOUtMOVdNSGowYUN4TmZualp6SGk3ZzdFdEI4TzlYQT09IiwNCiAgIkNyeXB0S2V5IjogInk3eXl2cGJzYkFMOTdmR0FRanB5VTEzbWx4THVMU1ZGNFZHbDVSRVVKVWM9IiwNCiAgIkF1dGhLZXkiOiAiWEFVbExUY2ZDaTVSNU9uelhxaHpTQjBJdEFVQ3NCeSt4T1h2cHBEWlBFND0iDQp9</Value>
+    </Setting>
+    <Setting Name="RunServerJobsInParallel" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RunAzureJobaInParallel" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

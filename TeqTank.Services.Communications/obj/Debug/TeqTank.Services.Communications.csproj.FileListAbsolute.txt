@@ -1,0 +1,7 @@
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Communications\bin\Debug\TeqTank.Services.Communications.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Communications\bin\Debug\TeqTank.Services.Communications.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Communications\obj\Debug\TeqTank.Services.Communications.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Communications\obj\Debug\TeqTank.Services.Communications.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Communications\obj\Debug\TeqTank.Services.Communications.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Communications\bin\Debug\websocket-sharp.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Communications\obj\Debug\TeqTank.Services.Communications.csprojResolveAssemblyReference.cache

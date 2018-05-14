@@ -1,0 +1,17 @@
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\TeqTank.Services.ServicesController.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\TeqTank.Services.ServicesController.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\obj\Debug\TeqTank.Services.ServicesController.csprojResolveAssemblyReference.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\obj\Debug\TeqTank.Services.ServicesController.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\obj\Debug\TeqTank.Services.ServicesController.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\obj\Debug\TeqTank.Services.ServicesController.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\TeqTank.Services.Common.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\TeqTank.Services.Common.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\TeqTank.Services.MakoRunners.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\Microsoft.Azure.WebJobs.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\Topshelf.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\Newtonsoft.Json.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\TeqTank.Services.MakoRunners.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\TeqTank.Services.MakoRunners.dll.config
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\Microsoft.Azure.WebJobs.xml
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\Topshelf.xml
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.ServicesController\bin\Debug\Newtonsoft.Json.xml

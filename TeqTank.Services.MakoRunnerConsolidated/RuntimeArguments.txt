@@ -1,0 +1,40 @@
+###############################################################################
+#
+#	The Runtime Arguments.txt file contains the arguments passed to the 
+#	TeqTank.Services.MakoRunnerConsolidated console application.
+#
+#	The valid options and their meaning(s) follows, but is subject to change at 
+#	any time, so please re-read this file from time to time to ensure that you 
+#	are running the application properly.
+#
+#	Main arguments:
+#		-server		denotes that the user wants to run a Windows service.
+#		-azure		denotes that the user wants to run an Azure WebJob.
+#
+#	NOTE: Only one command, with argument(s), is valid for any single execution
+#		  of the console application. The first valid command will be used and
+#		  all others will be ignored.
+#
+#	Required command values
+#		<company ID>{,<company ID>}*	
+#	At least one company ID is required for both the -server and the -azure 
+#	commands. 
+#	*Additional company IDs may be supplied in the format shown,
+#	without blanks in the comma-separated string of company IDs.
+#
+#	Optional command values
+#		There are currently no optional command values.
+#
+#	Separator character ":"
+#
+#	Examples
+#		-server:11,13,77
+#		-server:11
+#		-azure:11
+#		-azure:11,13
+#		-server				ERROR - At least ONE company ID must be supplied
+#		-azure:				ERROR - At least ONE company ID must be supplied
+#
+###############################################################################
+
+-server:11

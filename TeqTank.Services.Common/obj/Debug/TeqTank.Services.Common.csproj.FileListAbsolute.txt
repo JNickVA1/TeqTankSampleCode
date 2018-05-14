@@ -1,0 +1,6 @@
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\Debug\TeqTank.Services.Common.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\Debug\TeqTank.Services.Common.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\Debug\TeqTank.Services.Common.csprojResolveAssemblyReference.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\Debug\TeqTank.Services.Common.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\Debug\TeqTank.Services.Common.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\Debug\TeqTank.Services.Common.pdb

@@ -1,0 +1,7 @@
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.DataAccess\bin\DebugNewNoDocs\TeqTank.Services.DataAccess.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.DataAccess\bin\DebugNewNoDocs\TeqTank.Services.DataAccess.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.DataAccess\bin\DebugNewNoDocs\TeqTank.Services.DataAccess.xml
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.DataAccess\obj\DebugNewNoDocs\TeqTank.Services.DataAccess.csprojResolveAssemblyReference.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.DataAccess\obj\DebugNewNoDocs\TeqTank.Services.DataAccess.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.DataAccess\obj\DebugNewNoDocs\TeqTank.Services.DataAccess.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.DataAccess\obj\DebugNewNoDocs\TeqTank.Services.DataAccess.pdb

@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeqTank.Services.ServicesController</name>
+    </assembly>
+    <members>
+        <member name="T:TeqTank.Services.ServicesController.EventArguments.ServiceControllerEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.ServicesController.EventArguments.ServiceControllerEventArgs.ServiceId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.ServicesController.EventArguments.ServicesControllerErrorArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.ServicesController.EventArguments.ServicesControllerErrorArgs.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.ServicesController.EventArguments.ServicesControllerErrorArgs.ErrorSeverity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.ServicesController.EventArguments.ServicesControllerInfoArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.ServicesController.EventArguments.ServicesControllerInfoArgs.InfoMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.ServicesController.ServicesController">
+            <summary>
+            The ServicesController is the primary point of creation, access, and discovery of the TeqTank Services.
+            
+            The public constructors, methods, and properties of the ServicesController offer the means to start, pause, and stop/cancel
+            TeqTank Services. In addition, the ServicesController allows the user to specify various options for running Services, specify 
+            logging options, specify data access options, etc.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:TeqTank.Services.ServicesController.ServicesController.ServicesControllerInfoEvent">
+            <summary>
+            The event used to send string messages to listeners.
+            </summary>
+            <remarks>
+            The intent of this event is to use it to respond to user input, status requests, 
+            and informational messages from the Services Controller to listeners.
+            </remarks>
+        </member>
+        <member name="E:TeqTank.Services.ServicesController.ServicesController.ServicesControllerErrorEvent">
+            <summary>
+            The event used to report errors to listeners.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.#ctor(System.Collections.Generic.IReadOnlyCollection{TeqTank.Services.Common.Commands.ConsoleCommand})">
+            <summary>
+            
+            </summary>
+            <param name="commandList"></param>
+        </member>
+        <member name="P:TeqTank.Services.ServicesController.ServicesController.TaskManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.StartAllServices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.StopAllServices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.StartServiceByName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serviceName"></param>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.StopServiceByName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serviceName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.StartServiceById(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="serviceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.StopServiceById(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="serviceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.OnServicesControllerInfoEvent(TeqTank.Services.ServicesController.EventArguments.ServicesControllerInfoArgs)">
+            <summary>
+            The ServicesControllerInfoEvent event invocation.
+            </summary>
+            <param name="info">The message string being supplied to the event listeners.</param>
+            <remarks>
+            Always a good idea to wrap event invocations inside a protected virtual method
+            to allow derived classes to override the event invocation behavior.
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ServicesController.OnServicesControllerErrorEvent(TeqTank.Services.ServicesController.EventArguments.ServicesControllerErrorArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager">
+            <summary>
+            The <see cref="T:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager"/> is used to start, stop, 
+            pause, and cancel thread tasks that are running the services. 
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.#ctor(System.Collections.Generic.Dictionary{System.Guid,TeqTank.Services.MakoRunners.Runners.BaseMakoRunner})">
+            <summary>
+            The ThreadTaskManager will ... 
+            </summary>
+            <param name="activeRunners"></param>
+        </member>
+        <member name="P:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.ActiveRunners">
+            <summary>
+            A collection of active Runners with the Runner ID (GUID) as the key.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.StartAll">
+            <summary>
+            The method used to start all Runners listed in the ConsoleCommand.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.Start(System.Guid)">
+            <summary>
+            The method used to start a specific Runner based on the Runner ID.
+            </summary>
+            <param name="serviceId"></param>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.StopAll">
+            <summary>
+            The method used to stop all currently running Runners.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.Stop(System.Guid)">
+            <summary>
+            The method used to stop a specific Runner based on the Runner ID.
+            </summary>
+            <param name="serviceId"></param>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.PauseAll">
+            <summary>
+            The method used to pause all currently running Runners.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.ServicesController.ThreadTaskManagement.ThreadTaskManager.Pause(System.Guid)">
+            <summary>
+            The method used to pause a specific Runner based on the Runner ID.
+            </summary>
+            <param name="serviceId"></param>
+        </member>
+    </members>
+</doc>

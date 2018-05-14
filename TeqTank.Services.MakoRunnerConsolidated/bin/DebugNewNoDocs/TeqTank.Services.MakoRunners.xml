@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeqTank.Services.MakoRunners</name>
+    </assembly>
+    <members>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.AzureMakoRunner">
+            <summary>
+            The AzureMakoRunner uses an Azure WebJob to perform the tasks, such as RunCommissions.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.AzureMakoRunner.#ctor(System.Guid,TeqTank.Services.Common.Commands.ConsoleCommand)">
+            <summary>
+            The default constructor for the Azure Mako Runner.
+            </summary>
+            <param name="keyAzure">A unique identifier for the Runner.</param>
+            <param name="consoleCommand">The command that will be used in creating and starting the Runner.</param>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.AzureMakoRunner.CompanySettingsForId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.AzureMakoRunner.Token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.AzureMakoRunner.Start">
+            <inheritdoc />
+            <summary>
+            The Start method will create a JobHost, retrieve the necessary data for each Company ID
+            in the RunnerInfo object, create a QueueManager for each Company ID, and perform other 
+            WebJob startup tasks specific to the Azure Mako Runner.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.AzureMakoRunner.GetCompanyRunnerInfo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="infoCompanyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.AzureMakoRunner.Stop">
+            <summary>
+            The Stop method sends a Cancellation Token to the thread started in the Start method.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.AzureWebJob">
+            <inheritdoc />
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.AzureWebJob.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.AzureWebJob.RunCommissionsStatic(TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig,TeqTank.Services.DataAccess.DataQueue.RunQueueItem,TeqTank.Applications.Mako.MakoAdmin,System.String,TeqTank.Services.DataAccess.DataQueue.QueueManagement)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="item"></param>
+            <param name="makoAdmin"></param>
+            <param name="connStr"></param>
+            <param name="queueManager"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.AzureWebJob.RunCommissions(TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig,TeqTank.Services.DataAccess.DataQueue.RunQueueItem,TeqTank.Applications.Mako.MakoAdmin,System.String,TeqTank.Services.DataAccess.DataQueue.QueueManagement)">
+            <inheritdoc />
+            <summary>
+            </summary>
+            <param name="config"></param>
+            <param name="item"></param>
+            <param name="makoAdmin"></param>
+            <param name="connStr"></param>
+            <param name="queueManager"></param>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.BaseAzureWebJob">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseAzureWebJob.Config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseAzureWebJob.LastPlanId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseAzureWebJob.ThresherToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseAzureWebJob.RunCommissionsStatic(TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig,TeqTank.Services.DataAccess.DataQueue.RunQueueItem,TeqTank.Applications.Mako.MakoAdmin,System.String,TeqTank.Services.DataAccess.DataQueue.QueueManagement)">
+            <summary>
+            A placeholder for the method implemented in the derived classes.
+            </summary>
+            <param name="config"></param>
+            <param name="item"></param>
+            <param name="makoAdmin"></param>
+            <param name="connStr"></param>
+            <param name="queueManager"></param>
+            <remarks>
+            Derived classes must declare the RunCommissions as: 
+            	public new static void RunCommissionsStatic(...)
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseAzureWebJob.RunCommissions(TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig,TeqTank.Services.DataAccess.DataQueue.RunQueueItem,TeqTank.Applications.Mako.MakoAdmin,System.String,TeqTank.Services.DataAccess.DataQueue.QueueManagement)">
+            <summary>
+            A placeholder for the method implemented in the derived classes.
+            </summary>
+            <param name="config"></param>
+            <param name="item"></param>
+            <param name="makoAdmin"></param>
+            <param name="connStr"></param>
+            <param name="queueManager"></param>
+            <remarks>
+            Derived classes must declare the RunCommissions as: 
+            	public override void RunCommissions(...)
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.LastPlanId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.LastRevisionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.ThresherToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.Assembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.PlanName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.Admin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.MakoLogger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.MakoCache">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.QueueManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.ConnectString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.MakoSocket">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.MyRunnerId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.Info">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.CanRunInParallel">
+            <summary>
+            A flag that indicates whether the Runner's action method can be used in multiple, parallel, Tasks.
+            For example, we may want to process multiple Companies simultaneously.
+            </summary>
+            <remarks>
+            Defaults to 'false' and must be explicitly set to 'true' in a derived class. If the 
+            action to be performed is in a static method, then leave the default value intact. 
+            Within a static method you can always perform actions in a child Task that run in 
+            parallel. For example, we may want to process items from a concurrent queue in child
+            tasks of the main Runner Task.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.Config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.IsDevelopment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.#ctor(System.Guid,TeqTank.Services.Common.Commands.ConsoleCommand)">
+            <summary>
+            The constructor of the base class, from which Mako Runners should be derived,
+            will store various bits of data relating to the service being created. These
+            bits of data will be similar for all Mako Runners.
+            </summary>
+            <param name="keyServer"></param>
+            <param name="consoleCommand"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.UpdateMakoAdmin(TeqTank.Services.DataAccess.DataQueue.RunQueueItem,TeqTank.Applications.Mako.SqlCacheRepo,TeqTank.Applications.Mako.ILogProvider)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="cache"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.Start">
+            <summary>
+            Performs the logic needed to start the job.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.Stop">
+            <summary>
+            Uses the Task and CancellationToken obtained in the Start method to halt the thread.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseMakoRunner.MakoLogger__onProgressUpdate(System.Object,System.ComponentModel.ProgressChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService._logRunTy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService._listLog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService._logCompanyId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService._logQueueId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService._logPeriodType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService._logPeriodId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.#ctor(TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig,TeqTank.Services.MakoRunners.ThreadObjects.ServiceProgressInfo)">
+            <summary>
+            
+            </summary>
+            <param name="companyConfig"></param>
+            <param name="serviceProgressInfo"></param>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.ServiceProgressInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.Config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.LastPlanId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.LastRevisionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.MakoLogger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.MakoCache">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.QueueManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.ConnectString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.MakoSocket">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.CompanySettingsForId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.Admin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.ThresherToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.Assembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.PlanName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.UpdateMakoAdmin(TeqTank.Services.DataAccess.DataQueue.RunQueueItem,TeqTank.Applications.Mako.SqlCacheRepo,TeqTank.Applications.Mako.ILogProvider)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="cache"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.Start(Topshelf.HostControl)">
+            <summary>
+            
+            </summary>
+            <param name="hostControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.Stop(Topshelf.HostControl)">
+            <summary>
+            
+            </summary>
+            <param name="hostControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.RunCommissions">
+            <summary>
+            A placeholder for the method implemented in the derived classes.
+            </summary>
+            <remarks>
+            Derived classes must declare the RunCommissions as: 
+            	public override void RunCommissions()
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.BaseTopshelfWindowsService.MakoLogger__onProgressUpdate(System.Object,System.ComponentModel.ProgressChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.IMakoRunner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.Config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.LastPlanId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.LastRevisionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.ThresherToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.Assembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.PlanName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.Admin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.MakoLogger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.MakoCache">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.QueueManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.ConnectString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.IMakoRunner.MakoSocket">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.IMakoRunner.UpdateMakoAdmin(TeqTank.Services.DataAccess.DataQueue.RunQueueItem,TeqTank.Applications.Mako.SqlCacheRepo,TeqTank.Applications.Mako.ILogProvider)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="cache"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.RunnerInfo">
+            <summary>
+            Contains information used to identify and manipulate a Mako Runner.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.#ctor(TeqTank.Services.Common.Commands.ConsoleCommand)">
+            <summary>
+            The RunnerInfo class is responsible for parsing the ConsoleCommand and 
+            storing various items used in running and maintaining a Mako Runner.
+            </summary>
+            <param name="consoleCommand"></param>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.CompanyIds">
+            <summary>
+            A List of Company IDs as string values.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.RunnerTasks">
+            <summary>
+            The Tasks started by one of the Runner objects. To be used to communicate with the threads.
+            </summary>
+            <remarks>
+            To be used for Windows Services or any other type of Runner EXCEPT an Azure WebJob.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.RunnerTaskWithResult">
+            <summary>
+            The Task, with TResult, started by one of the Runner objects. To be used to communicate with the thread.
+            </summary>
+            <remarks>
+            To be used for Windows Services or any other type of Runner EXCEPT an Azure WebJob.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.RunnerName">
+            <summary>
+            The name(s) of the Runners, if supplied.
+            </summary>
+            <remarks>
+            I am allowing for a future when we might allow for unique Runner names for each Company ID being processed.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ServiceType">
+            <summary>
+            The type of service that the Runner represents.
+            </summary>
+            <remarks>
+            Common values could be WindowsService or AzureWebJob.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.SequentialOrParallel">
+            <summary>
+            The order in which a service should process a list of multiple company IDs.
+            
+            Defaults to ProcessingOrder.Sequential which indicates that multiple company IDs
+            will be processed sequentially instead of in parallel.
+            </summary>
+            <remarks>
+            This value can be changed in the future by modifying the command line argument
+            syntax to include a value for this item. 
+            I am thinking that we could append a ":S" or ":P" to the command line argument.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.PreferredServiceLocation">
+            <summary>
+            The identifying string for the preferred location, or machine, or service instance, 
+            where the service identified in the command should be run.
+            </summary>
+            <remarks>
+            I am allowing for a future when we might allow for unique Service Locations for each Company ID being processed.
+            If the Preferred Service Location is empty, we will use a predefined Default.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.RunnerInfo.TaskTokenSources">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ExtractRunnerInfoFromCommand(TeqTank.Services.Common.Commands.ConsoleCommand)">
+            <summary>
+            Parse the Value portion of the ConsoleCommand in order to extract any and all user-supplied values.
+            </summary>
+            <param name="consoleCommand"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ExtractRunnerServiceType(TeqTank.Services.Common.Commands.ConsoleCommand)">
+            <summary>
+            Set the Service Type from the value in the ConsoleCommand Command property.
+            </summary>
+            <param name="consoleCommand"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ExtractValueSubstrings(System.String)">
+            <summary>
+            Extract the Value sub-values, if they exist.
+            </summary>
+            <param name="consoleCommandValue"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ExtractPreferredService">
+            <summary>
+            Retrieve all of the Preferred Service Location values from the command Value.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ExtractProcessingOrder">
+            <summary>
+            Retrieve the processing order specifier from the command Value.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ExtractRunnerNames">
+            <summary>
+            Retrieve all of the Runner Names from the command Value.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.RunnerInfo.ExtractCompanyIds">
+            <summary>
+            Retrieve all of the company IDs from the command Value.
+            </summary>
+            <remarks>
+            For the initial version, we will only attempt to extract Company IDs when the
+            ConsoleCommand Value is in the form id1, id2, id3...
+            
+            The initial version syntax for the command line is:
+            	"-service-type:ID1,ID2,...IDN
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.ServerMakoRunner">
+            <summary>
+            The ServerMakoRunner uses a Windows service to perform the tasks, such as RunCommissions.
+            </summary>
+            <remarks>
+            We are currently using the TopShelf library to start and configure the Windows service,
+            however, we should be able to run the Windows service directly. In support of this, I have
+            placed all TopShelf related calls in methods that can be replaced by methods that don't
+            use TopShelf.
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.ServerMakoRunner.#ctor(System.Guid,TeqTank.Services.Common.Commands.ConsoleCommand)">
+            <summary>
+            The default constructor for the Server Mako Runner.
+            </summary>
+            <param name="keyServer">A unique identifier for the Runner.</param>
+            <param name="consoleCommand">The command that will be used in creating and starting the Runner.</param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.ServerMakoRunner.Start">
+            <inheritdoc />
+            <summary>
+            The Start method will create and start the task(s).
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.ServerMakoRunner.RunWindowsService(System.Threading.CancellationToken,TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig,TeqTank.Services.MakoRunners.ThreadObjects.ServiceProgressInfo)">
+            <summary>
+            
+            </summary>
+            <param name="cancelRunner"></param>
+            <param name="companyConfig"></param>
+            <param name="runnerProgress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.ServerMakoRunner.Stop">
+            <summary>
+            The Stop method sends a Cancellation Token to the thread started in the Start method.
+            </summary>
+            <remarks>
+            Since we may have multiple Tasks running in parallel, we want to cancel all of the Tasks in the 
+            RunnerInfo RUnnerTaskList for this Runner.
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.#ctor(TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig,TeqTank.Services.MakoRunners.ThreadObjects.ServiceProgressInfo)">
+            <summary>
+            
+            </summary>
+            <param name="companyConfig"></param>
+            <param name="serviceProgressInfo"></param>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.IsRunning">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.Start(Topshelf.HostControl)">
+            <summary>
+            
+            </summary>
+            <param name="hostControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.Stop(Topshelf.HostControl)">
+            <summary>
+            
+            </summary>
+            <param name="hostControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.RunCommissions">
+            <summary>
+            The method that does the work of calculating and posting the commissions.
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.ProcessQueue(TeqTank.Services.Common.Configuration.ApplicationContract)">
+            <summary>
+            
+            </summary>
+            <param name="appContract"></param>
+        </member>
+        <member name="M:TeqTank.Services.MakoRunners.Runners.TopshelfWindowsService.ProcessQueueItem(TeqTank.Services.Common.Configuration.ApplicationContract,TeqTank.Applications.Mako.DelegateLogProvider,TeqTank.Applications.Mako.SqlCacheRepo,TeqTank.Services.DataAccess.DataQueue.QueueManagement)">
+            <summary>
+            
+            </summary>
+            <param name="appContract"></param>
+            <param name="makoLogger"></param>
+            <param name="makoCache"></param>
+            <param name="queueManager"></param>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.AzureWebJobResult">
+            <inheritdoc />
+            <summary>
+            The object used to return results from an Azure WebJob Task.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.CommissionsThreadParameter">
+            <summary>
+            The object used as thread data. 
+            </summary>
+            <remarks>
+            Contains properties that can be used for bother server and Azure web static methods.
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.IAzureWebJobResult">
+            <summary>
+            The interface that defines general properties and methods to 
+            be used in Task TResult classes for Azure WebJobs.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.IServiceProgressInfo">
+            <summary>
+            The interface that defines general properties and methods to be used in Progress Info classes.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.ThreadObjects.IServiceProgressInfo.ServiceName">
+            <summary>
+            The name of the service.
+            </summary>
+            <remarks>
+            This is a specific, unique, name, such as WindowsService27, NOT a generic name, such as "Windows" or "Azure".
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.IServiceTaskResult">
+            <summary>
+            The interface that defines general properties and methods to 
+            be used in Task TResult classes for Windows services.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.RunCommissionServiceProgressInfo">
+            <inheritdoc />
+            <summary>
+            The class used to report progress for a Task that is used to call the RunCommissions method.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.ServiceProgressInfo">
+            <inheritdoc />
+            <summary>
+            The ServiceProgressInfo class is used as the value sent on a progress
+            event by the Progress class which is invoked within the Task that runs
+            the service method.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.ThreadObjects.ServiceProgressInfo.ServiceName">
+            <inheritdoc />
+            <summary>
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.MakoRunners.ThreadObjects.ServiceTaskResult">
+            <inheritdoc />
+            <summary>
+            The object used to return results from a service Task.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.MakoRunners.ThreadObjects.ServiceTaskResult.ServiceReturnCode">
+            <summary>
+            The integer representation of the service return code.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeqTank.Services.Common</name>
+    </assembly>
+    <members>
+        <member name="T:TeqTank.Services.Common.Authentication.AuthenticateAndAuthorize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Authentication.AuthenticateAndAuthorize.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Authentication.AuthenticateAndAuthorize.CurrentBaseUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Authentication.AuthenticateAndAuthorize.GetTokenForUser(System.String,System.String)">
+            <summary>
+            Generates a TeqTank Token that allows for multiple companies to be logged into
+            </summary>
+            <param name="username">User name of user</param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Authentication.AuthenticateAndAuthorize.GetApplication(System.String)">
+            <summary>
+            Retrieves the application data for the URL and token value provided.
+            </summary>
+            <param name="token"></param>
+            <returns>The JSON string returned from the GET call.</returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Authentication.AuthenticateAndAuthorize.GetTokenForAzureUser(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="configUsername"></param>
+            <param name="configPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeqTank.Services.Common.BaseCommon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.BaseCommon.AppBaseUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.BaseCommon.ApiBaseUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.Caching.CacheHelper">
+            <summary>
+            The CacheHelper class contains methods to: store to, read from, delete from a MemoryCache. 
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType.Assembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType.ProjectName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.SaveToCache(System.Int32,System.Int32,System.Int32,System.Object,TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType)">
+            <summary>
+            Saves an Object To Cache
+            </summary>
+            <param name="companyId"></param>
+            <param name="projectId"></param>
+            <param name="revisionId"></param>
+            <param name="saveItem"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.GetFromCache``1(System.Int32,System.Int32,System.Int32,TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="companyId"></param>
+            <param name="projectId"></param>
+            <param name="revisionId"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.RemoveFromCache(System.Int32,System.Int32,System.Int32,TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType)">
+            <summary>
+            
+            </summary>
+            <param name="companyId"></param>
+            <param name="projectId"></param>
+            <param name="revisionId"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.IsIncache(System.Int32,System.Int32,System.Int32,TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType)">
+            <summary>
+            
+            </summary>
+            <param name="companyId"></param>
+            <param name="projectId"></param>
+            <param name="revisionId"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.GenerateCacheKey(System.Int32,System.Int32,System.Int32,TeqTank.Services.Common.Caching.CacheHelper.CacheObjectType)">
+            <summary>
+            Returns 
+            </summary>
+            <param name="companyId"></param>
+            <param name="projectId"></param>
+            <param name="revisionId"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.SaveTocache(System.String,System.Object,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="cacheKey"></param>
+            <param name="savedItem"></param>
+            <param name="absoluteExpiration"></param>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.GetFromCache``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="cacheKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.RemoveFromCache(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="cacheKey"></param>
+        </member>
+        <member name="M:TeqTank.Services.Common.Caching.CacheHelper.IsIncache(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="cacheKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeqTank.Services.Common.Commands.ConsoleCommand">
+            <summary>
+            The ConsoleCommand class represents a single command line argument with an optional value.
+            </summary>
+            <remarks>
+            To allow for future enhancements, the ConsoleCommand class is designed initially to read and parse
+            command line arguments with the following syntax:
+            
+            -commandName:REQUIREDcommaSeperatedListOfCompanyIDs:OPTIONALRunnerNames:OPTIONALProcessingOrderSpecifier:OPTIONALPreferredServiceIdentifiers
+            
+            Some examples would be: 
+            
+            -server:1,22,11:ServiceMain:P:WindowsServer1 OR
+            -server:1 OR
+            -server:11::S
+            
+            Hopefully, the code as written can handle the optional items. Also, I have allowed for 
+            comma-separated values for every option except Processing Order Specifier
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.Common.Commands.ConsoleCommand.#ctor(System.String)">
+            <summary>
+            The default ctor that parses the input string to extract the command and the optional value.
+            </summary>
+            <param name="parseableCommandString"></param>
+            <exception cref="T:System.ApplicationException"></exception>
+            <remarks>
+            The ConsoleCommand has been written specifically for the Mako Runner application and makes use
+            of the specialized syntax defined for the console commands. It is not worth the time or effort 
+            to make this reusable for other applications at this time.
+            </remarks>
+        </member>
+        <member name="P:TeqTank.Services.Common.Commands.ConsoleCommand.Command">
+            <summary>
+            The Console Command gleaned from a command line argument.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Commands.ConsoleCommand.Value">
+            <summary>
+            The optional value for the Console Command.
+            </summary>
+            <remarks>
+            The Value property may consist of multiple command values in a delimited string.
+            For example, we may add the capability for a service to run on multiple companies,
+            either sequentially or in parallel. In that case, the command Value string could
+            contain a delimited list of company IDs, such as: 11,73,1.
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig.CompanyId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig.CompanyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig.CompanyKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig.Pwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig.CryptKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfig.AuthKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanySettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanySettings.#ctor(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="connStr"></param>
+            <param name="companyId"></param>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanySettings.Settings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanySettings.UpdateCompanySettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanySettings.TableLastModified(System.String,System.String[])">
+            <summary>
+            http://dba.stackexchange.com/questions/12749/finding-the-last-time-a-table-was-updated
+            </summary>
+            <param name="connStr"></param>
+            <param name="tables"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration">
+            <summary>
+            The <see cref="T:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration"/> class defines properties that correspond to 
+            the Company section in the application configuration file.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.CompanyId">
+            <summary>
+            The identifier used to universally refer to one specific company.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.CompanySubId">
+            <summary>
+            The identifier used to refer to a company subsidiary. 
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.PlanId">
+            <summary>
+            The identifier used to refer to a company's commission plan. 
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.CompanyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.CompanyKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.Pwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.CryptKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.CompanyConfiguration.CompanyConfiguration.AuthKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.Configuration.ProjectConfiguration.VSProject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.Configuration.ProjectConfiguration.VsProjectDll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ProjectConfiguration.VsProjectDll.Dll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ProjectConfiguration.VsProjectDll.PlanName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Configuration.ProjectConfiguration.VsProjectDll.GetPlanDll(System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="projectId"></param>
+            <param name="revisionId"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeqTank.Services.Common.Configuration.ServicesConfiguration">
+            <summary>
+            The Services Configuration class is responsible for reading and saving all configuration data for the Mako Services.
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ServicesConfiguration.CompanyConfigurationList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.Configuration.ApplicationContract">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.CompanyId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.ApplicationTy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.AppVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.DatabaseTy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.DatabaseVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.CryptUid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.CryptPwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.CryptDb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.CryptServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TeqTank.Services.Common.Configuration.ApplicationContract.Port">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Configuration.ApplicationContract.GenerateConnectionStr">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Configuration.ApplicationContract.GetConnectionString(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="token"></param>
+            <param name="companyId"></param>
+            <param name="cryptKey"></param>
+            <param name="authKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeqTank.Services.Common.Cryptography.AesThenHmac">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TeqTank.Services.Common.Cryptography.AesThenHmac.SimpleDecrypt(System.String,System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            Simple Authentication (HMAC) then Decryption (AES) for a secrets UTF8 Message.
+            </summary>
+            <param name="encryptedMessage">The encrypted message.</param>
+            <param name="cryptKey">The crypt key.</param>
+            <param name="authKey">The auth key.</param>
+            <param name="nonSecretPayloadLength">Length of the non secret payload.</param>
+            <returns>
+            Decrypted Message
+            </returns>
+            <exception cref="T:System.ArgumentException">Encrypted Message Required!;encryptedMessage</exception>
+        </member>
+        <member name="M:TeqTank.Services.Common.Cryptography.AesThenHmac.SimpleEncrypt(System.Byte[],System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Simple Encryption(AES) then Authentication (HMAC) for a UTF8 Message.
+            </summary>
+            <param name="secretMessage">The secret message.</param>
+            <param name="cryptKey">The crypt key.</param>
+            <param name="authKey">The auth key.</param>
+            <param name="nonSecretPayload">(Optional) Non-Secret Payload.</param>
+            <returns>
+            Encrypted Message
+            </returns>
+            <remarks>
+            Adds overhead of (Optional-Payload + BlockSize(16) + Message-Padded-To-Blocksize +  HMac-Tag(32)) * 1.33 Base64
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.Common.Cryptography.AesThenHmac.SimpleDecrypt(System.Byte[],System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            Simple Authentication (HMAC) then Decryption (AES) for a secrets UTF8 Message.
+            </summary>
+            <param name="encryptedMessage">The encrypted message.</param>
+            <param name="cryptKey">The crypt key.</param>
+            <param name="authKey">The auth key.</param>
+            <param name="nonSecretPayloadLength">Length of the non secret payload.</param>
+            <returns>Decrypted Message</returns>
+        </member>
+        <member name="M:TeqTank.Services.Common.Cryptography.AesThenHmac.SimpleEncryptWithPassword(System.Byte[],System.String,System.Byte[])">
+            <summary>
+            Simple Encryption (AES) then Authentication (HMAC) of a UTF8 message
+            using Keys derived from a Password (PBKDF2)
+            </summary>
+            <param name="secretMessage">The secret message.</param>
+            <param name="password">The password.</param>
+            <param name="nonSecretPayload">The non secret payload.</param>
+            <returns>
+            Encrypted Message
+            </returns>
+            <exception cref="T:System.ArgumentException">Must have a password of minimum length;password</exception>
+            <remarks>
+            Significantly less secure than using random binary keys.
+            Adds additional non secret payload for key generation parameters.
+            </remarks>
+        </member>
+        <member name="M:TeqTank.Services.Common.Cryptography.AesThenHmac.SimpleDecryptWithPassword(System.Byte[],System.String,System.Int32)">
+            <summary>
+            Simple Authentication (HMAC) and then Descryption (AES) of a UTF8 Message
+            using keys derived from a password (PBKDF2). 
+            </summary>
+            <param name="encryptedMessage">The encrypted message.</param>
+            <param name="password">The password.</param>
+            <param name="nonSecretPayloadLength">Length of the non secret payload.</param>
+            <returns>
+            Decrypted Message
+            </returns>
+            <exception cref="T:System.ArgumentException">Must have a password of minimum length;password</exception>
+            <remarks>
+            Significantly less secure than using random binary keys.
+            </remarks>
+        </member>
+        <member name="T:TeqTank.Services.Common.EnumsAndConstants.ProcessingOrder">
+            <summary>
+            A simple enumeration that is used to specify the order 
+            in which a list of company IDs is processed
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.ProcessingOrder.Parallel">
+            <summary>
+            This specifies that we will run multiple company IDs 
+            through the runner at the same time. 
+            NOTE: The ConsoleCommand can be modified to accept a
+            	  number that represents the concurrent limit for 
+            	  parallel runs.
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.ProcessingOrder.Sequential">
+            <summary>
+            This specifies that multiple company IDs will be processed sequentially.
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.ProcessingOrder.Undefined">
+            <summary>
+            This specifies that multiple company IDs will be processed sequentially.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.EnumsAndConstants.ErrorSeverityCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.ErrorSeverityCode.ServiceFailure">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.ErrorSeverityCode.CompanyProcessingFailure">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.ErrorSeverityCode.OtherFailure">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.EnumsAndConstants.RunnerType">
+            <summary>
+            An enumeration of the different types of Mako Runners currently supported.
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.RunnerType.WindowsService">
+            <summary>
+            A Windows Service. 
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.RunnerType.AzureWebJob">
+            <summary>
+            An Azure WebJob.
+            </summary>
+        </member>
+        <member name="F:TeqTank.Services.Common.EnumsAndConstants.RunnerType.UndefinedOrUnknown">
+            <summary>
+            Undefined or unknown.
+            </summary>
+        </member>
+        <member name="T:TeqTank.Services.Common.TaskResultObjects.RunnerTaskResult">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\TeqTank.Services.Common.dll.config
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\TeqTank.Services.Common.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\TeqTank.Services.Common.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\TeqTank.Services.Common.xml
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\Newtonsoft.Json.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\TeqTank.Services.Communications.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\websocket-sharp.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\TeqTank.Services.Communications.pdb
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\TeqTank.Services.Communications.xml
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\bin\DebugNewWithDocs\Newtonsoft.Json.xml
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\DebugNewWithDocs\TeqTank.Services.Common.csprojResolveAssemblyReference.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\DebugNewWithDocs\TeqTank.Services.Common.csproj.CoreCompileInputs.cache
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\DebugNewWithDocs\TeqTank.Services.Common.dll
+C:\TeqNavi\Source\Repos\Service-Mako-Runner\TeqTank.Services.Common\obj\DebugNewWithDocs\TeqTank.Services.Common.pdb

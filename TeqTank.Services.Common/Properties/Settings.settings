@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TeqTank.Services.Common.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppBaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://server.teqtank.com/MakoApi/</Value>
+    </Setting>
+    <Setting Name="ApiBaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://thresherapi.azurewebsites.net/api/</Value>
+    </Setting>
+    <Setting Name="ValidCommands" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">server,azure</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
